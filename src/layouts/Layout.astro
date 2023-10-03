@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicon.svg" />
+		<link rel="mask-icon" href="/mask-icon.svg" color="#991b1b">
+		<link rel="stylesheet" href="/fonts/fontello/css/fontello.css" />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-800 font-systemui min-h-screen">
+		<slot />
+	</body>
+</html>
+
+<style>
+	body {
+		min-width: 375px;
+	}
+</style>

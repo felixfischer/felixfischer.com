@@ -1,0 +1,19 @@
+#cloud-config
+timezone: Europe/Berlin
+users:
+  - default
+  - name: felix
+    gecos: Felix
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZb3aG9ErzgBi7MhbRheUcPPA0+swOUdRQYfuub6d7M"
+    ssh_import_id:
+      - "gh:felixfischer"
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: true
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true
+packages:
+  - podman
+  - vim

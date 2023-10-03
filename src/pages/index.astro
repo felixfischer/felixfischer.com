@@ -3,35 +3,40 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Felix Fischer – kreativer Einsatz von Technik" description="">
-    <main class="flex justify-center items-center min-h-screen text-neutral-600 p-4">
+    <main
+        class="flex justify-center items-center text-neutral-600 p-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+    >
         <div
             id="card"
-            class="py-6 sm:py-8 px-8 sm:px-10 lg:px-14 lg:py-12 rounded bg-white shadow-xl"
+            class="p-6 sm:p-8 md:p-10 lg:p-12 rounded bg-white shadow-xl"
             data-tilt
-			data-tilt-scale="1"
+            data-tilt-startX="-1"
+            data-tilt-startY="2"
             data-tilt-glare="true"
-            data-tilt-max-glare="0.3"
+            data-tilt-max-glare="0.35"
             data-tilt-max="6"
             data-tilt-speed="1000"
             data-tilt-perspective="1000"
-			data-tilt-reset="false"
-			data-tilt-reverse="true"
-			data-tilt-full-page-listening="true"
+            data-tilt-reset="false"
+            data-tilt-reverse="true"
+            data-tilt-full-page-listening="true"
         >
-            <div id="card-content" class="elevate">
-                <h1 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-800 mb-0 mr-8">
+            <div id="card-content" class="">
+                <h1
+                    class="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-red-800 mb-0 uppercase"
+                >
                     Felix Fischer
                 </h1>
                 <h2
-                    class="text-sm sm:text-base lg:text-xl font-medium text-neutral-400 mr-12 sm:mr-16 lg:mr-24"
+                    class="font-normal text-neutral-400 leading-relaxed mr-12 sm:mr-20 md:mr-24 lg:mr-28 xl:mr-40"
                 >
                     kreativer Einsatz von Technik
                 </h2>
-                <p class="text-xs sm:text-sm lg:text-lg leading-normal my-6 lg:my-8 lg:mb-10">
+                <p class="leading-normal my-6 lg:my-8 lg:mb-10">
                     <strong>IT Solutions &amp; Consulting</strong><br />
                      Berlin, Germany
                 </p>
-                <div class="flex gap-3 sm:gap-4 lg:gap-5 text-base sm:text-lg lg:text-2xl">
+                <div class="flex gap-3 sm:gap-4 lg:gap-5 xl:gap-6 glyph-buttons">
                     <a
                         href="mailto:kontakt@felixfischer.com?subject=Hallo%20via%20Website"
                         title="E-Mail"
@@ -52,20 +57,26 @@ import Layout from '../layouts/Layout.astro'
 </Layout>
 
 <style>
-    [class^='icon-']:before,
-    [class*=' icon-']:before {
-		@apply hover:text-red-800 hover:scale-125 transition-all duration-300;
-        margin-inline: 0;
+    main {
+        height: 100svh;
     }
-	i.icon-github {
-		font-size: 112%;
-	}
     #card {
         transform-style: preserve-3d;
     }
-	.elevate {
-		transform: translateZ(1rem);
-	}
+    [class^='icon-']:before,
+    [class*=' icon-']:before {
+        @apply hover:text-red-800 hover:scale-125 transition-all duration-300;
+        margin-inline: 0;
+    }
+    i.icon-github {
+        font-size: 112%;
+    }
+    .glyph-buttons a i {
+        @apply p-2 -m-2;
+    }
+    .elevate {
+        transform: translateZ(1rem);
+    }
 </style>
 
 <script>

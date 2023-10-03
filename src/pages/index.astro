@@ -4,27 +4,48 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout title="Felix Fischer – kreativer Einsatz von Technik" description="">
     <main class="flex justify-center items-center min-h-screen text-neutral-600 p-4">
-        <div class="py-6 sm:py-8 px-8 sm:px-10 lg:px-12 lg:py-10 rounded bg-white shadow-xl">
-            <h1 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-800 mb-0 mr-8">Felix Fischer</h1>
-            <h2 class="text-sm sm:text-base lg:text-lg font-medium text-neutral-400 mr-12 sm:mr-16 lg:mr-24">kreativer Einsatz von Technik</h2>
-            <p class="text-xs sm:text-sm lg:text-base leading-normal my-6 lg:my-8">
-                <strong>IT Solutions &amp; Consulting</strong><br />
-                 Berlin, Germany
-            </p>
-            <div class="flex gap-3 sm:gap-4 text-base sm:text-lg lg:text-xl">
-                <a
-                    href="mailto:kontakt@felixfischer.com?subject=Hallo%20via%20Website"
-                    title="E-Mail"
-                    rel="me"><i class="icon-mail-alt hover:text-red-800"></i></a
+        <div
+            id="card"
+            class="py-6 sm:py-8 px-8 sm:px-10 lg:px-12 lg:py-10 rounded bg-white shadow-xl"
+            data-tilt
+			data-tilt-scale="1"
+            data-tilt-glare="true"
+            data-tilt-max-glare="0.3"
+            data-tilt-max="6"
+            data-tilt-speed="1000"
+            data-tilt-perspective="1000"
+			data-tilt-reset="false"
+			data-tilt-reverse="true"
+			data-tilt-full-page-listening="true"
+        >
+            <div id="card-content" class="elevate">
+                <h1 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-red-800 mb-0 mr-8">
+                    Felix Fischer
+                </h1>
+                <h2
+                    class="text-sm sm:text-base lg:text-xl font-medium text-neutral-400 mr-12 sm:mr-16 lg:mr-24"
                 >
-                <a
-                    href="https://www.linkedin.com/in/felix-fischer-672a2844/"
-                    title="LinkedIn"
-                    rel="me"><i class="icon-linkedin hover:text-red-800"></i></a
-                >
-                <a href="https://www.github.com/felixfischer" title="GitHub" rel="me"
-                    ><i class="icon-github hover:text-red-800"></i></a
-                >
+                    kreativer Einsatz von Technik
+                </h2>
+                <p class="text-xs sm:text-sm lg:text-lg leading-normal my-6 lg:my-8">
+                    <strong>IT Solutions &amp; Consulting</strong><br />
+                     Berlin, Germany
+                </p>
+                <div class="flex gap-3 sm:gap-4 lg:gap-5 text-base sm:text-lg lg:text-2xl">
+                    <a
+                        href="mailto:kontakt@felixfischer.com?subject=Hallo%20via%20Website"
+                        title="E-Mail"
+                        rel="me"><i class="icon-mail-alt"></i></a
+                    >
+                    <a
+                        href="https://www.linkedin.com/in/felix-fischer-672a2844/"
+                        title="LinkedIn"
+                        rel="me"><i class="icon-linkedin"></i></a
+                    >
+                    <a href="https://www.github.com/felixfischer" title="GitHub" rel="me"
+                        ><i class="icon-github"></i></a
+                    >
+                </div>
             </div>
         </div>
     </main>
@@ -33,6 +54,20 @@ import Layout from '../layouts/Layout.astro'
 <style>
     [class^='icon-']:before,
     [class*=' icon-']:before {
+		@apply hover:text-red-800 hover:scale-125 transition-all duration-300;
         margin-inline: 0;
     }
+	i.icon-github {
+		font-size: 110%;
+	}
+    #card {
+        transform-style: preserve-3d;
+    }
+	.elevate {
+		transform: translateZ(1rem);
+	}
 </style>
+
+<script>
+    import tilt from 'vanilla-tilt'
+</script>

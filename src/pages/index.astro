@@ -37,7 +37,7 @@ import Layout from '../layouts/Layout.astro'
                     <strong class="font-semibold">IT Solutions &amp; Consulting</strong><br />
                      Berlin
                 </p>
-                <div class="elevate flex gap-3 sm:gap-4 lg:gap-5 xl:gap-6 glyph-buttons">
+                <div class="elevate flex gap-4 sm:gap-5 lg:gap-6 xl:gap-8 glyph-buttons">
                     <a
                         href="mailto:kontakt@felixfischer.com?subject=Hallo%20via%20Website"
                         title="E-Mail"
@@ -71,11 +71,11 @@ import Layout from '../layouts/Layout.astro'
         @apply hover:text-red-800 hover:scale-125 transition-all duration-300;
         margin-inline: 0;
     }
-    i.icon-github {
-        font-size: 112%;
-    }
     .glyph-buttons a i {
         @apply p-2 -m-2;
+		font-size: 115%;
+    }
+    .glyph-buttons a i.icon-github {
     }
     .elevate {
         transform: translateZ(2rem);

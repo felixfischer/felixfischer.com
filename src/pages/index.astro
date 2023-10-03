@@ -8,15 +8,15 @@ import Layout from '../layouts/Layout.astro'
     >
         <div
             id="card"
-            class="p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 rounded lg:rounded-lg xl:rounded-xl bg-white shadow-2xl"
+            class="p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 rounded lg:rounded-lg xl:rounded-xl bg-white shadow-4xl"
             data-tilt
             data-tilt-startX="0"
             data-tilt-startY="0"
-            data-tilt-glare="true"
+            data-tilt-glare="false"
             data-tilt-max-glare="0.35"
-            data-tilt-max="6"
-            data-tilt-speed="600"
-            data-tilt-perspective="1500"
+            data-tilt-max="3"
+            data-tilt-speed="300"
+            data-tilt-perspective="1000"
             data-tilt-reset="false"
             data-tilt-reverse="false"
             data-tilt-full-page-listening="false"
@@ -73,7 +73,7 @@ import Layout from '../layouts/Layout.astro'
     }
     [class^='icon-']:before,
     [class*=' icon-']:before {
-        @apply hover:text-red-800 hover:scale-125 transition-all duration-300;
+        @apply hover:text-red-800 hover:scale-125 transition-all duration-200;
         margin-inline: 0;
     }
     .glyph-buttons a i {

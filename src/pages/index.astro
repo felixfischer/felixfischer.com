@@ -4,11 +4,11 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout title="Felix Fischer – IT Solutions &amp; Consultancy" description="">
     <main
-        class="flex justify-center items-center text-neutral-600 p-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+        class="flex justify-center items-center text-neutral-800 p-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
     >
         <div
             id="card"
-            class="p-6 sm:p-8 md:p-10 lg:p-12 rounded bg-white shadow-xl"
+            class="p-8 sm:p-10 md:p-12 lg:p-14 xl:p-16 rounded bg-white shadow-2xl"
             data-tilt
             data-tilt-startX="-1"
             data-tilt-startY="2"
@@ -22,22 +22,22 @@ import Layout from '../layouts/Layout.astro'
             data-tilt-full-page-listening="true"
 			data-tilt-gyroscope="true"
         >
-            <div id="card-content" class="elevate px-0 sm:px-1 md:px-2 lg:px-3 xl:px-4">
+            <div id="card-content" class="px-0 sm:px-1 md:px-2 lg:px-3 xl:px-4">
                 <h1
-                    class="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-red-800 mb-0 uppercase"
+                    class="elevate text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-red-800 mb-0 uppercase tracking-wide"
                 >
                     Felix Fischer
                 </h1>
                 <h2
-                    class="font-normal text-neutral-400 leading-relaxed mr-16 sm:mr-20 md:mr-24 lg:mr-32 xl:mr-40"
+                    class="elevate font-medium text-neutral-400 leading-relaxed mr-16 sm:mr-20 md:mr-24 lg:mr-32 xl:mr-40"
                 >
                     kreativer Einsatz von Technik
                 </h2>
-                <p class="leading-normal my-6 lg:my-8 lg:mb-10">
+                <p class="elevate leading-normal my-6 lg:my-8 lg:mb-10">
                     <strong>IT Solutions &amp; Consultancy</strong><br />
                      Berlin, Germany
                 </p>
-                <div class="flex gap-3 sm:gap-4 lg:gap-5 xl:gap-6 glyph-buttons">
+                <div class="elevate flex gap-3 sm:gap-4 lg:gap-5 xl:gap-6 glyph-buttons">
                     <a
                         href="mailto:kontakt@felixfischer.com?subject=Hallo%20via%20Website"
                         title="E-Mail"
@@ -61,7 +61,8 @@ import Layout from '../layouts/Layout.astro'
     main {
         height: 100svh;
     }
-    #card {
+    #card,
+	#card-content {
         transform-style: preserve-3d;
     }
     [class^='icon-']:before,
